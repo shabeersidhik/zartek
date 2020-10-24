@@ -1,0 +1,50 @@
+<div class="outer">
+    <nav>
+        <mat-icon>keyboard_backspace</mat-icon>
+        <p class="restaurent-name">{{restName}}</p>
+        <div class="nav-section">
+            <p>My Orders</p>&nbsp;&nbsp;
+            <mat-icon matBadge={{count}} matBadgeColor="warn">shopping_cart</mat-icon>
+        </div>
+    </nav>
+    <div class="slider-tab"  >
+        <mat-tab-group animationDuration="0ms" >
+            <mat-tab *ngFor="let list of list;index as i" label="{{list.menu_category}}">
+               <div class="items" *ngFor="let item of list.category_dishes;index as h">
+                   <div class="item-each">
+                       <div class="item-desc">
+                        <div class="item-name">
+                            <span [style.border-color]="item.dish_Type=='1'?'brown':'green'" class="border">
+                            <div class="active-status" [style.background-color]="item.dish_Type=='1'?'brown':'green'"></div>
+                            </span>
+                            <span>{{item.dish_name}}</span>
+                        </div>
+                        <div class="item-price">
+                               <span>SAR {{item.dish_price}}</span>
+                                <span>{{item.dish_calories}} Calories</span>
+                        </div>
+                        <div class="dish-desc">
+                            <p>
+                                {{item.dish_description}}
+                            </p>
+                        </div>
+                        <div class="counter">
+                            <mat-icon  (click)="countDec(i,h,item.qty)" class="remove">remove</mat-icon>&nbsp;&nbsp;
+                            <p class="counts">
+                                {{item.qty}}
+                            </p>
+                            <mat-icon (click)="countAdd(i,h,item.qty)" class="add">add</mat-icon>&nbsp;&nbsp;
+                        </div>
+                        <div class="custom" *ngIf="item.addonCat.length>0">
+                            <p>Customization Available</p>
+                        </div>
+                    </div>
+                    <div class="dish-img">
+                        <img src="{{item.dish_image}}" class="image-item">
+                    </div>
+                    </div>
+               </div>
+            </mat-tab>
+        </mat-tab-group>
+    </div>
+</div>

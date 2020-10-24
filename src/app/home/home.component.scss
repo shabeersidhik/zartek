@@ -1,0 +1,162 @@
+@media(min-width:100px)and(max-width:500px){
+    ::ng-deep .mat-tab-header .mat-tab-label-container::-webkit-scrollbar {
+        display: none;
+      }
+    ::ng-deep .mat-tab-header {
+        overflow-x: scroll !important;
+      }
+      ::ng-deep .mat-tab-label-container { 
+        display: flex;
+        flex-grow: 1;
+        overflow: hidden;
+        z-index: 1;
+        overflow-x: scroll !important;
+
+      }
+      ::ng-deep .mat-tab-header-pagination {
+        display: none !important;
+    }
+    .counts{
+        margin-top: 8%;
+    }
+    .counter{
+        width: 40%;
+    }
+    .item-price{
+        margin-left: 6%;
+    }
+    .dish-desc{
+        margin-left: 5%;
+    }
+    .custom{
+        margin-left: 5%;
+    }
+    .image-item{
+        height: 50px;
+        width: 50px;
+    }
+    .outer{
+        margin-left: 2%;
+        margin-right: 4%;
+        margin-top: 6%;
+    }
+}
+@media(min-width:500px){
+    .counts{
+        margin-top: 6%;
+    }
+    .counter{
+        width: 20%;
+    }
+    .item-price{
+        margin-left: 2%;
+    }
+    .dish-desc{
+        margin-left: 2%;
+    }
+    .custom{
+        margin-left: 2%;
+    }
+    .image-item{
+        height: 100px;
+        width: 100px;
+    }
+    .outer{
+        margin-left: 2%;
+        margin-right: 2%;
+        margin-top: 2%;
+    }
+}
+::ng-deep.mat-ink-bar {
+    background-color: orangered !important;
+}
+::ng-deep.mat-tab-label.mat-tab-label-active {
+    color: orangered !important;
+}
+hr{
+    border-bottom: 1px solid black;
+}
+.outer{
+
+    nav{
+        display: flex;
+        justify-content: space-between;
+        color: grey;
+        .restaurent-name{
+            font-size: 1rem;
+        }
+        .mat-icon{
+            cursor: pointer;
+        }
+    }
+    .nav-section{
+        display: flex;
+    }
+    .slider-tab{
+        margin-top: 2%;
+        .items{
+            display: flex;
+            flex-direction: column;
+           .item-each{
+               display: flex;
+               justify-content: space-around;
+               margin-bottom: 5%;
+               margin-top: 2%;
+               border-bottom: 1px solid black;
+               .item-desc{
+                   width: 70vw;
+               }
+               .active-status{
+                margin: 0 auto !important;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%
+            }
+            .border {
+                border: solid 1px green;
+                margin-right: 2%;
+                padding: 3px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .item-name{
+                display: flex;
+                width: 80%;
+                align-items:baseline;
+               
+            }.item-price{
+                margin-top: 2%;
+                margin-bottom: 3%;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+            }
+           }
+           .custom{
+               color: red;
+           }
+        }
+        .counter{
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            background-color: green;
+            color: white;
+            border-radius: 20px;
+            margin-bottom: 5%;
+            .remove{
+                margin-right: 5%;
+                cursor: pointer;
+                outline: none;
+                border: none;
+            }
+            .add{
+                margin-left: 8%;
+                cursor: pointer;
+                outline: none;
+                border: none;
+            }
+        }
+    }
+}
